@@ -1,0 +1,117 @@
+@font-size: 12px;
+@nice-red: #f36969;
+.margin-width (@width: 5px) {
+  margin: 0 @width;
+}
+.mt10 {
+  margin-top: 40px;
+}
+.components-page {
+  font-size: @font-size;
+  .express-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .express-top-head {
+    color: #333;
+    padding: 10px 0;
+    border-bottom: solid 1px #e1e1e1;
+    .express-top-text{
+      .margin-width(10px);
+    }
+  }
+  .express-top-btn {
+    .at-tag {
+      color: @nice-red;
+      border-color: @nice-red;
+      background-color: rgb(255, 255, 255);
+      margin: 10px;
+    }
+    .btn-left {
+      color: rgb(255, 255, 255);
+      background-color: #ccc;
+      border-color: #ccc;
+    }
+    .active {
+      color: rgb(255, 255, 255);
+      background-color: #f5cf04;
+      border-color: #f5cf04;
+    }
+  }
+  .express-top-center {
+    background: #f4f4f4;
+    padding: 10px 5px;
+    .express-curr-total {
+      background: #fff;
+      border: 1PX #d6e4ef solid;
+      .margin-width();
+      border-radius: 12px;
+      height: 100%;
+      text-align: center;
+      color: #666;
+      .express-curr-number{
+        font-size: 24PX;
+        color: @nice-red;
+      }
+    }
+    .express-top-card {
+      .margin-width();
+      .at-card__header {
+        padding: 10px;
+      }
+      .at-card__header-title {
+        font-size: @font-size * 2;
+      }
+      .at-card__header-extra{
+        font-size: @font-size;
+        color: #30a56e;
+      }
+      .at-card__content{
+        padding: 10px;
+      }
+      .at-card__content-info{
+        font-size: @font-size;
+      }
+    }
+    .red {
+      .at-card__header-extra{
+        color: @nice-red;
+      }
+    }
+  }
+  .express-top-bottom{
+    .table-responsive-sm {
+      background: #f4f4f4;
+      table {
+        margin-bottom: 0;
+        th {
+          color: #333;
+          font-weight: normal;
+          border-bottom: 0;
+          border-right: solid 1px #f4f4f4;
+        }
+        td {
+          border: dashed 1px #ddd;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .express-top-view {
+    color: rgb(94, 173, 226);
+    height: 30PX;
+    line-height: 28PX;
+    border: solid 1px #ddd;
+    padding-left: 30px;
+  }
+}
+
+// @media screen and (max-width: 400px) {
+//   .at-button {
+//       background-color:lightblue;
+//   }
+// }
