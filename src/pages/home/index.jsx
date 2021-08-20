@@ -6,7 +6,10 @@ import Child from './child.jsx'
 function Index(){
 
   const [userName ,setUserName] = useState('Hello World!!!!')
-
+  const [blogTitle,setBlogTitle] = useState('')
+  useEffect(()=>{
+    setBlogTitle(this.$router.params.blogTitle)
+  },[])
   return ( 
     <View>
         <Text>{userName}</Text>
