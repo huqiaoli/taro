@@ -1,4 +1,5 @@
-import Taro, {  useState } from '@tarojs/taro'
+import React, { useState, useEffect}  from react
+import Taro, {Current}  from @tarojs/taro
 import { View, Text } from '@tarojs/components'
 import './index.less'
 import Child from './child.jsx'
@@ -7,9 +8,13 @@ function Index(){
 
   const [userName ,setUserName] = useState('Hello World!!!!')
   const [blogTitle,setBlogTitle] = useState('')
+  // getCurrentInstance().router 和 useRouter 返回的内容也一样
+  // const router = useRouter()
   useEffect(()=>{
-    setBlogTitle(this.$router.params.blogTitle)
+    // console.log(getCurrentInstance().router)
+    setBlogTitle(getCurrentInstance().router.params.blogTitle)
   },[])
+   
   return ( 
     <View>
         <Text>{userName}</Text>
