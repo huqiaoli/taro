@@ -1,5 +1,6 @@
 import  Taro,{Component}  from  '@tarojs/taro';
 import {View,Text,Image} from '@tarojs/components';
+import {getFoodCount,setFoodCount,getEvent}  from '../../utils/common';
 const  myEvent=getEvent();
 import './addcut.less';
 class  AddCut  extends  Component{
